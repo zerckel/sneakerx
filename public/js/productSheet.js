@@ -81,35 +81,36 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/home.js":
-/*!******************************!*\
-  !*** ./resources/js/home.js ***!
-  \******************************/
+/***/ "./resources/js/productSheet.js":
+/*!**************************************!*\
+  !*** ./resources/js/productSheet.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-setTimeout(function () {
-  document.querySelector('#product').scrollBy({
-    "behavior": "smooth",
-    "left": window.innerWidth / 2 + 300
+for (var i = 0; i < document.querySelectorAll('.sizeSelect').length; i++) {
+  document.querySelectorAll('.sizeSelect')[i].addEventListener('click', function () {
+    var elem = document.querySelector('.sizeSelect.active');
+    elem && elem !== this ? elem.classList.remove('active') : false;
+    this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active');
   });
-}, 300);
+}
 
 /***/ }),
 
-/***/ 1:
-/*!************************************!*\
-  !*** multi ./resources/js/home.js ***!
-  \************************************/
+/***/ 2:
+/*!********************************************!*\
+  !*** multi ./resources/js/productSheet.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\wamp64\www\Projects\sneakerx\resources\js\home.js */"./resources/js/home.js");
+module.exports = __webpack_require__(/*! D:\wamp64\www\Projects\sneakerx\resources\js\productSheet.js */"./resources/js/productSheet.js");
 
 
 /***/ })

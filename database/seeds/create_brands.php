@@ -20,10 +20,11 @@ class create_brands extends Seeder
         DB::table('brands')->insert([
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
-            'brand' => $faker->company,
+            'name' => $faker->company,
             'brandId' => rand(10,10000),
             'pics' => $faker->imageUrl(),
-            'description' => Hash::make('password')
+            'banner' => $faker->imageUrl(),
+            'description' => $faker->text()
         ]);
     }
 }

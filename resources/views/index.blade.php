@@ -6,7 +6,7 @@
 
 @section('body')
 
-    {{ View::make('components.index')  }}
+    {{ View::make('components.index')->with(['products'=> $products, 'news' => $news ]) }}
 
 @endsection
 

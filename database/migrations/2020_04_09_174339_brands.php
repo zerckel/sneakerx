@@ -17,8 +17,8 @@ class Brands extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('brand');
             $table->string('brandId');
+            $table->string('banner');
             $table->string('pics');
             $table->string('description');
         });
@@ -31,6 +31,6 @@ class Brands extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('brands');
     }
 }

@@ -15,9 +15,10 @@ class Users extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('mail');
+            $table->timestamps();
+            $table->string('email');
+            $table->string('name');
             $table->longText('password');
-            $table->longText('remember_token');
         });
     }
 
@@ -28,6 +29,6 @@ class Users extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('users');
     }
 }

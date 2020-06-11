@@ -17,13 +17,13 @@ class Products extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('MainPics');
-            $table->string('SecondaryPics');
+            $table->string('mainpics');
+            $table->string('secondarypics');
             $table->string('description');
-            $table->string('color');
+            $table->string('colors');
             $table->integer('brandId');
             $table->integer('price');
-            $table->binary( 'isPublished');
+            $table->boolean( 'isPublished');
         });
     }
 
@@ -34,6 +34,6 @@ class Products extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('products');
     }
 }

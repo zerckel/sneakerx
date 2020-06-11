@@ -18,9 +18,10 @@ class News extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('pics');
+            $table->text('resume');
             $table->longText('content');
-            $table->longText('author');
-            $table->binary( 'isPublished');
+            $table->text('author');
+            $table->boolean( 'isPublished');
         });
     }
 
@@ -31,6 +32,6 @@ class News extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('news');
     }
 }

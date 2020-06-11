@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'indexController@index');
+Route::get('/search/{search}', 'SearchController@index');
+Route::get('/product/{id}', 'productsheet@index');
+Route::get('/news/{id}', 'newssheet@index');
 
 Auth::routes();
 

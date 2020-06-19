@@ -26,6 +26,10 @@ html {
   scroll-behavior: smooth;
 }
 
+button {
+  outline: none;
+}
+
 body {
   margin: 0;
   background-color: #F4F4F4;
@@ -62,6 +66,28 @@ pre {
   color: white;
 }
 
+.alert {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  top: -40px;
+  z-index: 1;
+  transition: ease 1s;
+}
+
+.alert .alert-message {
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: white;
+}
+
+.border-grey {
+  border-bottom: 0.0625rem solid #d5d5d5;
+}
+
 #product::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: white;
@@ -88,6 +114,192 @@ pre {
 
 #productSheet .listPics::-webkit-scrollbar-track {
   opacity: 0;
+}
+
+body#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+body#contact article {
+  flex-grow: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+body#contact article form#formContact {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  padding: 0 10px;
+}
+
+body#contact article form#formContact input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  margin: 5px 0;
+}
+
+body#contact article form#formContact textarea {
+  border: none;
+  height: 100px;
+  width: 100%;
+  outline: none;
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
+body#contact article form#formContact button {
+  color: white;
+  border: solid 1px black;
+  background-color: black;
+  padding: 5px 15px;
+  font-size: 1rem;
+  width: calc(100% + 15px);
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+body#contact article form#formContact button:hover {
+  color: black;
+  background-color: white;
+}
+
+body#contact article > div {
+  margin-left: 2vw;
+}
+
+body#contact article > div section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+body#contact article > div section > h2 {
+  margin-top: 0;
+}
+
+body#contact article > div section a {
+  margin: 5px 0;
+}
+
+body#brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body#brands > div {
+  flex-grow: 4;
+  width: 70vw;
+}
+
+body#brands > div > figure {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  padding-bottom: 35px;
+}
+
+body#brands > div > figure img {
+  width: 200px;
+}
+
+body#brands > div > figure figcaption {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body#brands > div section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body#brands > div section article#brand {
+  width: 300px;
+  height: 205px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+body#brands > div section article#brand a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body#brands > div section article#brand a figure {
+  margin-bottom: 0;
+}
+
+body#brands > div section article#brand a figure img {
+  width: 100%;
+}
+
+body#brands > div section article#brand a figure figcaption {
+  text-align: center;
+}
+
+body#brands > div section article#brand a button {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: #0483c9;
+  color: white;
+  border: solid 1px #0483c9;
+  padding: 5px 10px;
+  transition: 1s;
+}
+
+body#brands > div section article#brand a button:hover {
+  background-color: white;
+  color: black;
+}
+
+body#results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+body#results > div {
+  flex-grow: 4;
+}
+
+body#results > div h2 {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+body#results > div section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination > li {
+  margin: 0 20px;
 }
 
 #productSheet {
@@ -272,13 +484,66 @@ pre {
 }
 
 #NewsSheet > article .short {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   margin: 30px 0 40px;
   padding-bottom: 40px;
+  border-radius: 100%;
   border-bottom: 1px solid #d5d5d5;
 }
 
+a#productUnique article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+}
+
+a#productUnique article figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a#productUnique article button {
+  opacity: 0;
+  transition: 0.5s;
+  border: none;
+  padding: 5px 15px;
+  color: white;
+}
+
+a#productUnique article button {
+  cursor: pointer;
+  margin-top: -35px;
+  border: solid 1px #0483c9;
+  background-color: #0483c9;
+}
+
+a#productUnique article button:hover {
+  background-color: white;
+  color: black;
+}
+
+a#productUnique article button:last-child {
+  margin-top: 10px;
+  background-color: black;
+  border: 1px solid black;
+}
+
+a#productUnique article button:last-child:hover {
+  background-color: white;
+  color: black;
+}
+
+a#productUnique article:hover button {
+  opacity: 1;
+}
+
 #home {
-  overflow-y: hidden;
+  padding-bottom: 50px;
 }
 
 #home section {
@@ -290,11 +555,12 @@ pre {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2vh auto;
+  font-size: 2rem;
+  margin: 5vh auto;
 }
 
 #home section > h2 > span {
-  width: 235px;
+  width: 325px;
   text-align: center;
 }
 
@@ -306,50 +572,83 @@ pre {
 #home section div#product {
   display: flex;
   overflow-x: scroll;
+  padding-bottom: 10px;
 }
 
-#home section div#product figure figcaption {
+#newsList {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
-#home section div#news {
+#newsList > div > figure {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  padding-bottom: 35px;
+}
+
+#newsList > div > figure img {
+  width: 200px;
+}
+
+#newsList > div > figure figcaption {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#newsList > div #news {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  grid-gap: 2vw;
+}
+
+#newsList > div #news a {
+  width: 100%;
+}
+
+#news {
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
 }
 
-#home section div#news a {
-  padding: 10px;
+#news a {
   width: 15%;
   background-color: white;
   border-radius: 5px;
-  border-bottom: 0.0625rem solid #d5d5d5;
 }
 
-#home section div#news a article {
+#news a div.blue {
+  padding: 5px 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-color: #0483c9;
+}
+
+#news a article {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
 }
 
-#home section div#news a article span {
+#news a article span {
   display: block;
   margin: 0 auto;
 }
 
-#home section div#news a article section {
+#news a article section {
   margin: 20px 0;
 }
 
-#home section div#news a article .date {
+#news a article .date {
   font-size: 11px;
-}
-
-#home section.black {
-  padding: 15px 0;
 }
 
 body#ERROR404 {
@@ -379,6 +678,7 @@ header {
   color: white;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 1;
   top: 0;
   width: 100vw;
 }
@@ -433,6 +733,7 @@ header .menu .search_bar .search {
 }
 
 header .menu .search_bar input {
+  padding: 1px 2px;
   background-color: black;
   border: none;
   width: 0;
@@ -440,16 +741,37 @@ header .menu .search_bar input {
   transition: 1s;
   color: white;
   outline: none;
-  border-bottom: 1px solid white;
 }
 
 header .menu .search_bar input:focus {
   width: 10vw;
+  padding: 1px 2px;
   margin-left: 0;
+  border-bottom: 1px solid white;
 }
 
 header .menu .search_bar:hover input {
   width: 10vw;
+  padding: 1px 2px;
   margin-left: 0;
+  border-bottom: 1px solid white;
+}
+
+header .menu .sticker {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  right: 30px;
+  top: 35px;
+  border-radius: 100%;
+  background-color: #d5d5d5;
+}
+
+header .menu .sticker .countArticles {
+  text-align: center;
+  margin-bottom: 3px;
 }
 

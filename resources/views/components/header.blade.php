@@ -1,4 +1,8 @@
 <header>
+{{--
+    <?php session()->forget('basket') ?>
+--}}
+
     <a href="/" title="SneakerX">
         <img src="<?= asset('storage/sneakerx-logo.png') ?>" alt="Logo SneakerX">
     </a>
@@ -9,36 +13,30 @@
             </label>
             <img src="<?= asset('storage/search.png') ?>" class="search" alt="Basket"/>
         </div>
-        <a href="" class="nav">
+        <a href="/brands/" class="nav">
             Catalogue
         </a>
-        <a href="" class="nav">
+        <a href="/news/" class="nav">
             News
         </a>
-        <a href="" class="nav">
+        <a href="/contact/" class="nav">
             Contact
         </a>
         <a href="" class="nav">
             <img src="<?= asset('storage/basket.png') ?>" class="basket" alt="search"/>
         </a>
+        @if(!empty(session('basket')))
+            <?php
+            $count_article = 0;
+            foreach (session('basket') as $article){
+                $count_article += $article[1];
+            }
+            ?>
+            <div class="sticker">
+                <span class="countArticles">
+                    {{ $count_article }}
+                </span>
+            </div>
+        @endif
     </div>
 </header>
-
-<script type="text/javascript" rel="script">
-
-    function getValue(elem) {
-
-        let search = document.querySelector('#search').value
-
-        if (search !== "" && elem.key === "Enter" || elem.key === undefined && search !== "") {
-            LaunchSearch(search)
-        }
-    }
-
-    function LaunchSearch(search) {
-        document.location.href = "/search/" + search
-    }
-
-    document.querySelector('#search').addEventListener("keypress", evt => getValue(evt))
-    document.querySelector('.search').addEventListener("click", evt => getValue(evt))
-</script>

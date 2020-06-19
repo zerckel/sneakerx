@@ -3,27 +3,30 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\View\View;
 
-class header extends Component
+class brand extends Component
 {
 
+    public $brand;
 
     /**
      * Create a new component instance.
      *
+     * @param $brand
      */
-    public function __construct()
+    public function __construct($brand)
     {
-
+        $this->brand = $brand;
     }
 
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\View\View|string
+     * @return View|string
      */
     public function render()
     {
-        return view('components.header');
+        return view('components.brand');
     }
 }

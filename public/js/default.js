@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -147,17 +147,23 @@ window.sendMail = function (message) {
 
 window.displayAlert = function (message) {
   var success = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var AlertMessage = $('#contact .alert-message');
+  var AlertMessage = $('.alert-message');
   AlertMessage.innerHTML = message;
   success ? AlertMessage.style.backgroundColor = '#27ae60' : AlertMessage.style.backgroundColor = '#c0392b';
-  $('#contact .alert').style.top = '5px';
+  $('.alert').style.top = '5px';
   setTimeout(function () {
-    $('#contact .alert').style.top = '-45px';
+    $('.alert').style.top = '-45px';
   }, 5000);
 };
 
 window.$ = function $(selector) {
   return document.querySelector(selector);
+};
+
+window.eventOnAll = function (allDOM, fnct) {
+  allDOM.forEach(function (dom) {
+    return dom.addEventListener('click', fnct);
+  });
 };
 
 window.getValue = function (elem) {
@@ -190,7 +196,7 @@ window.incrementBasket = function () {
     nbr.innerHTML = elem.toString();
   } else {
     var header = document.querySelector('.menu').innerHTML;
-    document.querySelector('.menu').innerHTML = header + "\n        <div class=\"sticker\">\n\n            <span class=\"countArticles\">\n\n                0\n\n            </span>\n\n        </div>\n";
+    document.querySelector('.menu').innerHTML = header + "\n        <div class=\"sticker\">\n\n            <span class=\"countArticles\">\n\n                1\n\n            </span>\n\n        </div>\n";
   }
 };
 
@@ -203,7 +209,7 @@ document.querySelector('.search').addEventListener("click", function (evt) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!***************************************!*\
   !*** multi ./resources/js/default.js ***!
   \***************************************/

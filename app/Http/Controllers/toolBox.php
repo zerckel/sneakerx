@@ -11,9 +11,14 @@ class toolBox extends Controller
 
         if (session()->has('basket')) {
 
-            $res = array_search([$_GET['id'], intval($_GET['quantity'])], session('basket'));
+            foreach (session('basket') as $index => $article) {
+                if ($_GET['id'] === $article[0]) {
+                    $res = $index;
+                    break;
+                }
+            }
 
-            if ($res) {
+            if (isset($res)) {
 
                 $basket = session('basket');
                 $basket[$res][1] += intval($_GET['quantity']);

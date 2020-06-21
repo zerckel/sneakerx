@@ -38,22 +38,26 @@ window.sendMail = function (message) {
 }
 
 window.displayAlert = function (message, success = 0) {
-  let AlertMessage = $('#contact .alert-message')
+  let AlertMessage = $('.alert-message')
 
   AlertMessage.innerHTML = message
 
   success ? AlertMessage.style.backgroundColor = '#27ae60' : AlertMessage.style.backgroundColor = '#c0392b'
 
-  $('#contact .alert').style.top = '5px'
+  $('.alert').style.top = '5px'
 
   setTimeout(function () {
-    $('#contact .alert').style.top = '-45px'
+    $('.alert').style.top = '-45px'
   }, 5000)
 }
 
 
 window.$ = function $(selector) {
   return document.querySelector(selector)
+}
+
+window.eventOnAll = function (allDOM, fnct){
+  allDOM.forEach(dom => dom.addEventListener('click', fnct))
 }
 
 window.getValue = function (elem) {
@@ -90,7 +94,7 @@ window.incrementBasket = function () {
     document.querySelector('.menu').innerHTML = header + `
         <div class="sticker">\n
             <span class="countArticles">\n
-                0\n
+                1\n
             </span>\n
         </div>\n`
   }

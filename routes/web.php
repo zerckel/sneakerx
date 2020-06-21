@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'indexController@index');
+Route::get('/basket/', 'basketController@index');
 Route::get('/contact/', 'contactController@index');
 Route::get('/brands/', 'catalogController@index');
 Route::get('/brands/{id}', 'catalogController@brandsId');
@@ -28,7 +29,15 @@ Route::prefix('tool')->group(function () {
 });
 
 Route::post('/sendmail/', 'mailController@index');
+Route::post('/confirmation/', 'confirmation@index');
+Route::get('/confirmation/', 'confirmation@finalPage');
 
 Auth::routes();
 
-Route::get('/admin', 'adminController@index')->name('admin');
+Route::prefix('admin')->group(function () {
+    Route::get('/', 'administratorController@index')->name('admin');
+    Route::get('/logout', 'administratorController@logout')->name('admin');
+    Route::get('/catalog/', 'administratorController@catalog')->middleware('auth');
+    Route::get('/products/', 'administratorController@products')->middleware('auth');
+    Route::get('/news/', 'administratorController@news')->middleware('auth');
+});

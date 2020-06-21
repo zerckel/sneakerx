@@ -67,7 +67,7 @@ pre {
 }
 
 .alert {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -773,5 +773,230 @@ header .menu .sticker {
 header .menu .sticker .countArticles {
   text-align: center;
   margin-bottom: 3px;
+}
+
+#order .content {
+  width: 1200px;
+  display: block;
+  margin: 0 auto;
+  padding: 2vh 0;
+}
+
+#order .content h1 {
+  text-align: center;
+  border-bottom: solid 1px black;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#order .content .userInfo {
+  padding: 0 1vw;
+}
+
+#order .content .userInfo > div {
+  margin: 2px 0;
+}
+
+#order .content .articles {
+  padding: 0 1vw;
+}
+
+#order .content .articles .article {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#order .content .articles .article figure {
+  margin: 0;
+  display: flex;
+}
+
+#order .content .articles .article figure figcaption {
+  display: flex;
+  margin-left: 10px;
+}
+
+#order .content .articles .article figure figcaption .price {
+  margin-left: 5vw;
+}
+
+#order .content .totalPrice {
+  font-size: 20px;
+}
+
+#cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cart .content {
+  width: 1280px;
+  margin-top: 5vh;
+}
+
+#cart .content h2 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px black;
+  padding-bottom: 5px;
+}
+
+#cart .content .article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#cart .content .article figure {
+  width: 30%;
+  display: flex;
+  margin: 0;
+}
+
+#cart .content .article figure figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  padding-left: 10px;
+}
+
+#cart .content .article .colors select {
+  width: 150px;
+}
+
+#cart .content .article > div {
+  width: 30%;
+}
+
+#cart .content .article > div:last-child {
+  width: 10%;
+}
+
+#cart .content .article > div:last-child input {
+  width: 35px;
+}
+
+#cart .content .article > div:last-child input::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+#cart .content hr {
+  display: block;
+  width: 90%;
+  height: 0.5px;
+  margin: 30px auto;
+  border: none;
+  background-color: black;
+}
+
+#cart .content .order {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+
+#cart .content .order button {
+  transition: 0.5s;
+  font-size: 18px;
+  background-color: black;
+  border: 1px solid black;
+  padding: 5px 15px;
+  color: white;
+  cursor: pointer;
+}
+
+#cart .content .order button:hover {
+  background-color: white;
+  color: black;
+}
+
+#cart .content .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 0;
+  width: 980px;
+  margin: 0 auto 5vh;
+  overflow: hidden;
+  transition: 2s;
+}
+
+#cart .content .form > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#cart .content .form .userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  margin-right: 15px;
+}
+
+#cart .content .form .card #cardNumber {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#cart .content .form label {
+  margin: 10px 0;
+}
+
+#cart .content .form label input {
+  height: 25px;
+  border: none;
+}
+
+#admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#admin header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#admin header .subheader a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: solid 1px white;
+  transition: 0.5s;
+}
+
+#admin header .subheader a:hover {
+  color: black;
+  background-color: white;
+}
+
+#admin header > a {
+  margin: 0 5vw;
+}
+
+#admin header > a:last-child img {
+  height: auto;
+}
+
+#admin .container {
+  flex-grow: 4;
+}
+
+#admin .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: unset;
 }
 

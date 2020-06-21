@@ -1,8 +1,4 @@
 <header>
-{{--
-    <?php session()->forget('basket') ?>
---}}
-
     <a href="/" title="SneakerX">
         <img src="<?= asset('storage/sneakerx-logo.png') ?>" alt="Logo SneakerX">
     </a>
@@ -22,7 +18,7 @@
         <a href="/contact/" class="nav">
             Contact
         </a>
-        <a href="" class="nav">
+        <a href="/basket/" class="nav">
             <img src="<?= asset('storage/basket.png') ?>" class="basket" alt="search"/>
         </a>
         @if(!empty(session('basket')))

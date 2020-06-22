@@ -5,12 +5,9 @@
 @section('body')
 
     @if(isset($data))
-        {{ View::make('auth.login') }}
+        {{ View::make('auth.listData')->with('data', $data) }}
     @else
         {{ View::make('auth.login') }}
     @endif
 
-
 @endsection
-
-@section('script', "home.js")

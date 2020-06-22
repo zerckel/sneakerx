@@ -70,7 +70,7 @@ pre {
   position: fixed;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  margin: 0 auto;
   top: -40px;
   z-index: 1;
   transition: ease 1s;
@@ -226,9 +226,9 @@ body#brands > div section {
 
 body#brands > div section article#brand {
   width: 300px;
-  height: 205px;
+  height: 250px;
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: 40px;
 }
 
 body#brands > div section article#brand a {
@@ -239,11 +239,17 @@ body#brands > div section article#brand a {
 }
 
 body#brands > div section article#brand a figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 4;
   margin-bottom: 0;
 }
 
 body#brands > div section article#brand a figure img {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 body#brands > div section article#brand a figure figcaption {
@@ -981,6 +987,11 @@ header .menu .sticker .countArticles {
   background-color: white;
 }
 
+#admin header .subheader a.active {
+  color: black;
+  background-color: white;
+}
+
 #admin header > a {
   margin: 0 5vw;
 }
@@ -993,10 +1004,92 @@ header .menu .sticker .countArticles {
   flex-grow: 4;
 }
 
+#admin .container > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#admin .container > div:first-child > div:first-child {
+  width: 10vw;
+}
+
+#admin .container > div:first-child h2 {
+  text-align: center;
+  flex-grow: 4;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+#admin .container > div:first-child > a {
+  width: 10vw;
+}
+
+#admin .container .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+#admin .container .list .headList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  padding-bottom: 1vh;
+  margin-bottom: 1vh;
+  border-bottom: solid 1px black;
+}
+
+#admin .container .list .headList > span {
+  width: 30%;
+}
+
+#admin .container .list .headList > span:last-child {
+  text-align: right;
+}
+
+#admin .container .list .elemList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 1vh;
+  margin-bottom: 1vh;
+  border-bottom: solid 1px black;
+}
+
+#admin .container .list .elemList .option {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#admin .container .list .elemList .option a {
+  margin-right: 5px;
+}
+
+#admin .container .list .elemList > span,
+#admin .container .list .elemList .option {
+  width: 33%;
+}
+
 #admin .login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: unset;
+}
+
+#admin .alert {
+  top: 10vh;
+}
+
+#admin .alert .alert-message {
+  text-transform: uppercase;
+  background-color: #27ae60;
 }
 

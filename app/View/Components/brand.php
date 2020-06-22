@@ -9,6 +9,7 @@ class brand extends Component
 {
 
     public $brand;
+    public $picture;
 
     /**
      * Create a new component instance.
@@ -18,6 +19,7 @@ class brand extends Component
     public function __construct($brand)
     {
         $this->brand = $brand;
+        $this->picture = asset('storage/brands/' . $brand->pics);
     }
 
     /**

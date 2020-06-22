@@ -21,7 +21,6 @@ class create_brands extends Seeder
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
             'name' => $faker->company,
-            'brandId' => rand(10,10000),
             'pics' => $faker->imageUrl(),
             'banner' => $faker->imageUrl(),
             'description' => $faker->text()

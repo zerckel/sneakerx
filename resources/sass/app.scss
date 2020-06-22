@@ -52,7 +52,7 @@ pre {
     position: fixed;
     display: flex;
     justify-content: center;
-    width: 100vw;
+    margin: 0 auto;
     top: -40px;
     z-index: 1;
     transition: ease 1s;
@@ -210,9 +210,9 @@ body#brands {
 
             article#brand {
                 width: 300px;
-                height: 205px;
+                height: 250px;
                 cursor: pointer;
-                margin-bottom: 5px;
+                margin-bottom: 40px;
 
                 a {
                     height: 100%;
@@ -221,10 +221,13 @@ body#brands {
                     justify-content: space-between;
 
                     figure {
+                        @include flex-column();
+                        flex-grow: 4;
                         margin-bottom: 0;
 
                         img {
-                            width: 100%;
+                            display: block;
+                            margin: 0 auto;
                         }
 
                         figcaption {
@@ -976,6 +979,11 @@ header {
                     background-color: white;
                 }
             }
+
+            a.active {
+                color: black;
+                background-color: white;
+            }
         }
 
         > a {
@@ -991,9 +999,82 @@ header {
 
     .container {
         flex-grow: 4;
+
+        > div:first-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            > div:first-child {
+                width: 10vw;
+            }
+
+            h2 {
+                text-align: center;
+                flex-grow: 4;
+                padding-top: 20px;
+                margin-bottom: 30px;
+            }
+
+            > a {
+                width: 10vw;
+            }
+        }
+
+        .list {
+            @include flex-column();
+            margin-bottom: 5vh;
+
+            .headList {
+                @include flex(space-between, center);
+                width: 100%;
+                font-weight: bold;
+                padding-bottom: 1vh;
+                margin-bottom: 1vh;
+                border-bottom: solid 1px black;
+
+                > span {
+                    width: 30%;
+
+                    &:last-child {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .elemList {
+                @include flex(space-between, center);
+                width: 100%;
+                padding-bottom: 1vh;
+                margin-bottom: 1vh;
+                border-bottom: solid 1px black;
+
+                .option {
+                    @include flex(flex-end, center);
+
+                    a {
+                        margin-right: 5px;
+                    }
+                }
+
+                > span,
+                .option {
+                    width: 33%;
+                }
+            }
+        }
     }
 
     .login {
         @include flex-column(center, unset);
+    }
+
+    .alert {
+        top: 10vh;
+
+        .alert-message {
+            text-transform: uppercase;
+            background-color: $success;
+        }
     }
 }

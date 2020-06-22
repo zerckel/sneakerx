@@ -25,7 +25,7 @@ Route::get('/news/', 'newssheet@indexList');
 Route::get('/news/{id}', 'newssheet@index');
 
 Route::prefix('tool')->group(function () {
-    Route::get('addToBasket', 'toolBox@addToBasket' );
+    Route::get('addToBasket', 'toolBox@addToBasket');
 });
 
 Route::post('/sendmail/', 'mailController@index');
@@ -36,8 +36,17 @@ Auth::routes();
 
 Route::prefix('admin')->group(function () {
     Route::get('/', 'administratorController@index')->name('admin');
-    Route::get('/logout', 'administratorController@logout')->name('admin');
-    Route::get('/catalog/', 'administratorController@catalog')->middleware('auth');
-    Route::get('/products/', 'administratorController@products')->middleware('auth');
-    Route::get('/news/', 'administratorController@news')->middleware('auth');
+
+    Route::middleware('auth')->group(function () {
+        Route::get('/logout', 'administratorController@logout');
+        Route::delete('/products/{id}', 'administratorController@deleteProducts');
+        Route::delete('/news/{id}', 'administratorController@deleteNews');
+        Route::delete('/brands/{id}', 'administratorController@deleteBrands');
+        Route::get('/brands', 'administratorController@brands');
+        Route::get('/products', 'administratorController@products');
+        Route::get('/news', 'administratorController@news');
+        Route::get('/brands/add', 'brandsController@index');
+        Route::get('/products/add', 'productsController@index');
+        Route::get('/news/add', 'newsController@index');
+    });
 });

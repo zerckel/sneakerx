@@ -1,7 +1,7 @@
 <div>
     @if(!isset($news))
         <figure class="border-grey">
-            <img src="<?= isset($brand) ? $brand->banner : "../storage/softLogo.png" ?>" alt="SneakerX">
+            <img src="<?= isset($brand) ? asset('storage/brands/' . $brand->banner) : "../storage/softLogo.png" ?>" alt="SneakerX">
             <figcaption>
                 <h2>
                     {{  isset($brand)  ?  $brand->name  : "BRANDS:" }}

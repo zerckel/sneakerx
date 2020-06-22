@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class administratorController extends Controller
 {
@@ -65,6 +66,10 @@ class administratorController extends Controller
 
     public function deleteBrands($id)
     {
+        $res = DB::table('brands')->select('banner', 'pics')
+            ->where('id', '=', $id)->get()[0];
+
+        Storage::delete(['public/brands/' . $res->banner, 'public/brands/' . $res->pics]);
         DB::table('brands')->where('id', '=', $id)->delete();
         DB::table('products')->where('brandId', '=', $id)->delete();
         return redirect('/admin/brands?message=success');

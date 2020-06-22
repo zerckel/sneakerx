@@ -49,7 +49,7 @@
                     {{ $elem->name ?? $elem->title }}
                 </span>
                 <div class="option">
-                    <a href="">
+                    <a href="{{ url()->current() }}/{{ $elem->id }}">
                         <button class="btn btn-warning">
                             UPDATE
                         </button>

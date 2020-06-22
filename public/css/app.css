@@ -66,7 +66,7 @@ pre {
   color: white;
 }
 
-.alert {
+body > .alert {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -76,7 +76,7 @@ pre {
   transition: ease 1s;
 }
 
-.alert .alert-message {
+body > .alert .alert-message {
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -263,7 +263,7 @@ body#brands > div section article#brand a button {
   background-color: #0483c9;
   color: white;
   border: solid 1px #0483c9;
-  padding: 5px 10px;
+  padding: 5px 30px;
   transition: 1s;
 }
 
@@ -1091,5 +1091,40 @@ header .menu .sticker .countArticles {
 #admin .alert .alert-message {
   text-transform: uppercase;
   background-color: #27ae60;
+}
+
+#admin > .option {
+  padding-top: 5vh;
+}
+
+#admin > .option h2 {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: solid 1px black;
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
+}
+
+#admin > .option .files {
+  margin-bottom: 2vh;
+}
+
+#admin > .option .files_upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: unset;
+}
+
+#admin > .option .files_upload > .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+}
+
+#admin > .option button {
+  width: 100%;
+  margin-top: 5vh;
+  font-weight: bold;
 }
 

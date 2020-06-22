@@ -39,14 +39,28 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware('auth')->group(function () {
         Route::get('/logout', 'administratorController@logout');
+
         Route::delete('/products/{id}', 'administratorController@deleteProducts');
         Route::delete('/news/{id}', 'administratorController@deleteNews');
         Route::delete('/brands/{id}', 'administratorController@deleteBrands');
+
         Route::get('/brands', 'administratorController@brands');
         Route::get('/products', 'administratorController@products');
         Route::get('/news', 'administratorController@news');
         Route::get('/brands/add', 'brandsController@index');
         Route::get('/products/add', 'productsController@index');
         Route::get('/news/add', 'newsController@index');
+
+        Route::post('/brands/add', 'brandsController@addBrand');
+        Route::post('/products/add', 'productsController@addProduct');
+        Route::post('/news/add', 'newsController@addNews');
+
+        Route::get('/brands/{id}', 'brandsController@update');
+        Route::get('/products/{id}', 'productsController@update');
+        Route::get('/news/{id}', 'newsController@update');
+
+        Route::put('/brands/{id}', 'brandsController@updateBrand');
+        Route::put('/products/{id}', 'productsController@updateProduct');
+        Route::put('/news/{id}', 'newsController@updateNews');
     });
 });

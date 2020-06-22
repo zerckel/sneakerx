@@ -17,8 +17,8 @@
 
 @if($message ?? '')
     <div class="alert">
-        <span class="alert-message">
-            {{ $message }}
+        <span class="alert-message {{ isset($_GET['success']) ? 'btn-danger' : false }}">
+            {{ str_replace("_", " ", $message) }}
         </span>
     </div>
 @endif
@@ -26,13 +26,14 @@
 @section('body')
 @show
 </body>
+
 <script type="text/javascript">
     document.querySelector('.alert') ? unShowMessage() : false
 
     function unShowMessage() {
         setTimeout(function () {
             document.querySelector('.alert').style.top = "-500px"
-        }, 3000)
+        }, 2000)
     }
 </script>
 </html>

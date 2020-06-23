@@ -12,7 +12,7 @@ class SearchController extends Controller
             'search' => $search,
             'results' => DB::table('products')->where([
                 ["name", "LIKE", '%' . $search . '%'],
-                ["isPublished", "===", 1]
+                ["isPublished", "=", 1]
             ])->paginate(9)
         ]);
     }

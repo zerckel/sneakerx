@@ -19,8 +19,8 @@ class brandsController extends Controller
         $request->validate([
             'name' => 'bail|required|max:255',
             'description' => 'bail|required|min:20',
-            'pics' => 'bail|required|image|mimes:png|dimensions:min_width=220',
-            'banner' => 'bail|required|image'
+            'pics' => 'bail|required|image|mimes:png',
+            'banner' => 'bail|required|image|mimes:png'
         ]);
 
         $pics = $request->file('pics');

@@ -8,6 +8,6 @@
         {{ $news->resume }}
     </div>
     <section>
-        {{ $news->content }}
+        {!! html_entity_decode($news->content)  !!}
     </section>
 </article>

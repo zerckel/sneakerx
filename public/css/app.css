@@ -324,7 +324,7 @@ body#results > div section {
 
 #productSheet > div .left {
   width: 50%;
-  height: 440px;
+  height: 240px;
   padding: 0 50px;
   display: flex;
   justify-content: unset;
@@ -1104,10 +1104,6 @@ header .menu .sticker .countArticles {
   border-bottom: solid 1px black;
   padding-bottom: 2vh;
   margin-bottom: 2vh;
-}
-
-#admin > .option form .name {
-  width: 20%;
 }
 
 #admin > .option form #editor {

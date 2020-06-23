@@ -7,3 +7,11 @@ for (let i = 0; i < document.querySelectorAll('.sizeSelect').length; i++) {
 
     })
 }
+
+document.querySelectorAll('.img').forEach(res => {
+    res.addEventListener('mouseover', changePics)
+})
+
+function changePics() {
+    document.querySelector('.picsMain').src = this.src
+}

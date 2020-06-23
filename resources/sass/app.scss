@@ -314,7 +314,7 @@ body#results {
 
         .left {
             width: 50%;
-            height: 440px;
+            height: 240px;
             padding: 0 50px;
             @include flex(unset);
 
@@ -1094,10 +1094,6 @@ header {
 
         form {
 
-            .name {
-                width: 20%;
-            }
-
             #editor {
                 height: 15vh;
                 background-color: white;
@@ -1138,7 +1134,7 @@ header {
             }
         }
 
-        .published{
+        .published {
             margin-top: 20px;
         }
 

@@ -2,14 +2,14 @@
     <section class="left">
         @if($product->secondarypics)
             <div class="listPics">
-                <img src="https://picsum.photos/300/400" alt="{{ $product->name }}">
-                @for($i = 0; $i < 6; $i++)
-                    <img src="https://picsum.photos/300/400" alt="{{ $product->name }}">
-                @endfor
+                <img src="{{ asset('../storage/products/'.$product->mainpics) }}" alt="{{ $product->name }}">
+            @foreach(unserialize($product->secondarypics) as $secondary)
+                    <img class="img" src="{{ asset('../storage/products/'.$secondary) }}" alt="{{ $product->name }}">
+                @endforeach
             </div>
         @endif
         <div class="mainPic">
-            <img src="https://picsum.photos/300/400" alt="{{ $product->name }}">
+            <img class="picsMain" width="300px" src="{{ asset('../storage/products/'.$product->mainpics) }}" alt="{{ $product->name }}">
         </div>
     </section>
     <section class="right">
@@ -20,7 +20,7 @@
                 {{ substr($product->created_at, 0, 10) }}
             </span>
             <p>
-                <b>Description:</b> {{ $product->description }}
+                <b>Description:</b> {!! html_entity_decode($product->description) !!}
             </p>
             <div class="choice">
                 <label for="color"> Colors: <br/>

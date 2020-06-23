@@ -9,6 +9,7 @@
     <title>Admin - SneakerX</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link href="/css/app.css" type="text/css" rel="stylesheet">
 </head>
 <body id="@yield('id')">
@@ -26,7 +27,7 @@
 @section('body')
 @show
 </body>
-
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script type="text/javascript">
     document.querySelector('.alert') ? unShowMessage() : false
 
@@ -35,5 +36,9 @@
             document.querySelector('.alert').style.top = "-500px"
         }, 2000)
     }
+
+    let quill = new Quill('#editor', {
+        theme: 'snow'
+    });
 </script>
 </html>

@@ -7,7 +7,7 @@
             @method('PUT')
         @endif
         @csrf
-        <div class="form-group">
+        <div class="form-group name">
             <label for="name">Name :</label>
             <input type="text" class="form-control" value="{{ $data ? $data->name : old('name') }}" name="name"
                    id="name" placeholder="Enter brand name">
@@ -72,7 +72,7 @@
         @if($data)
             <input type="hidden" name="id" value="{{ $data->id }}">
         @endif
-        <button type="submit" class="btn {{ $data ? "btn-warning" : "btn-success" }}">
+        <button type="submit" class="btn-option btn {{ $data ? "btn-warning" : "btn-success" }}">
             {{ $data ? "MODIFY" : "ADD" }}
         </button>
     </form>

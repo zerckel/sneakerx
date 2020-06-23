@@ -1095,6 +1095,7 @@ header .menu .sticker .countArticles {
 
 #admin > .option {
   padding-top: 5vh;
+  margin-bottom: 2vh;
 }
 
 #admin > .option h2 {
@@ -1103,6 +1104,34 @@ header .menu .sticker .countArticles {
   border-bottom: solid 1px black;
   padding-bottom: 2vh;
   margin-bottom: 2vh;
+}
+
+#admin > .option form .name {
+  width: 20%;
+}
+
+#admin > .option form #editor {
+  height: 15vh;
+  background-color: white;
+}
+
+#admin > .option form .form-row .brand {
+  margin-right: 10vw;
+  width: 20%;
+}
+
+#admin > .option form .form-row .price {
+  width: 10%;
+}
+
+#admin > .option form .form-row .price > div {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+#admin > .option form .form-row .price > div > span {
+  margin-left: 15px;
 }
 
 #admin > .option .files {
@@ -1122,7 +1151,17 @@ header .menu .sticker .countArticles {
   align-items: center;
 }
 
-#admin > .option button {
+#admin > .option .published {
+  margin-top: 20px;
+}
+
+#admin > .option .btn-option {
+  width: 100%;
+  margin-top: 2vh;
+  font-weight: bold;
+}
+
+#admin > .option button:not(.ql-bold, .ql-italic, .ql-underline, .ql-line) {
   width: 100%;
   margin-top: 5vh;
   font-weight: bold;

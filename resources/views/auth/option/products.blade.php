@@ -4,7 +4,7 @@
 @endphp
 <div class="option container">
     <h2>
-        {{ $data ? "Modify your brand" : "Add a new brand"  }}
+        {{ $data ? "Modify your product" : "Add a new product"  }}
     </h2>
     <form name="formProduct" id="formProduct" action="{{ url()->current() }}" method="POST"
           enctype="multipart/form-data">

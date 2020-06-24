@@ -1,7 +1,7 @@
 <a id="productUnique" href="/product/{{ $id }}" title="{{ $name }} ">
     <article>
         <figure>
-            <img src="https://picsum.photos/300/200" alt="product">
+            <img height="100px" style="display: block; margin: 0 auto" src="{{ asset('../storage/products/' . $pics) }}" alt="product">
             <figcaption>
             <span>
                {{ $name }}

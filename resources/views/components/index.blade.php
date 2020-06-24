@@ -5,7 +5,7 @@
     </h2>
     <div id="product">
         @php
-            ddd($products)
+            var_dump($products)
         @endphp
         @foreach($products as $product)
             <x-product :product="$product"></x-product>

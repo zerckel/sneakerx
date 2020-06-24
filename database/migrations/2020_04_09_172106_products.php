@@ -18,8 +18,8 @@ class Products extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('mainpics');
-            $table->string('secondarypics');
-            $table->string('description');
+            $table->longText('secondarypics');
+            $table->longText('description');
             $table->string('colors');
             $table->integer('brandId');
             $table->integer('price');

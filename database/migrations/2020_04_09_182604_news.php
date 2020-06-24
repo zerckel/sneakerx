@@ -18,7 +18,7 @@ class News extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('pics');
-            $table->text('resume');
+            $table->longText('resume');
             $table->longText('content');
             $table->text('author');
             $table->boolean( 'isPublished');

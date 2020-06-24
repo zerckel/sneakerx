@@ -17,9 +17,9 @@ class Brands extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('banner');
-            $table->string('pics');
-            $table->string('description');
+            $table->longText('banner');
+            $table->longText('pics');
+            $table->longText('description');
         });
     }
 

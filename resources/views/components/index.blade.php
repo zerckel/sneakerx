@@ -4,10 +4,13 @@
             src="storage/arrow-down.png" alt="arrow down">
     </h2>
     <div id="product">
+        <pre>
+
         @php
             var_dump($products);
 die();
         @endphp
+        </pre>
         @foreach($products as $product)
             <x-product :product="$product"></x-product>
         @endforeach

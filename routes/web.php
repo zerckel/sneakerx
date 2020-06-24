@@ -38,6 +38,7 @@ Route::middleware('cors')->group(function () {
 
     Route::prefix('admin')->group(function () {
         Route::get('/', 'administratorController@index')->name('admin');
+        Route::post('/login', 'Aut\loginController@login');
 
 
         Route::middleware('auth')->group(function () {

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class create_user extends Seeder
 {
@@ -17,7 +18,7 @@ class create_user extends Seeder
             'updated_at' => \Carbon\Carbon::now(),
             'email' => 'antoinecarbonnel@yahoo.fr',
             'name' => 'Antoine Carbonnel',
-            'password' => encrypt('antoine')
+            'password' => Hash::make('antoine')
         ]);
     }
 }

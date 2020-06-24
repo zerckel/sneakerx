@@ -4,6 +4,9 @@
             src="storage/arrow-down.png" alt="arrow down">
     </h2>
     <div id="product">
+        @php
+            ddd($products)
+        @endphp
         @foreach($products as $product)
             <x-product :product="$product"></x-product>
         @endforeach

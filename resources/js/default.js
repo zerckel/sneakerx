@@ -23,7 +23,7 @@ window.checkMail = function () {
 
 window.sendMail = function (message) {
 
-    fetch("https://sneakerx-webstart.herokuapp.com/contact/sendmail/", {
+    fetch("https://sneakerx-webstart.herokuapp.com/sendmail/", {
         method: 'POST',
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').getAttribute('content'),

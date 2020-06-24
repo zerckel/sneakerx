@@ -19,6 +19,17 @@ class administratorController extends Controller
         return redirect('/');
     }
 
+    public function register($name, $email, $password){
+        DB::table('users')->insert([
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
+            'email' => $email,
+            'name' => $name,
+            'password' => md5($password)
+        ]);
+
+    }
+
     public function brands()
     {
 

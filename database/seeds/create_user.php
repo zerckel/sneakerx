@@ -17,7 +17,7 @@ class create_user extends Seeder
             'updated_at' => \Carbon\Carbon::now(),
             'email' => 'antoinecarbonnel@yahoo.fr',
             'name' => 'Antoine Carbonnel',
-            'password' => ''
+            'password' => md5('antoine')
         ]);
     }
 }

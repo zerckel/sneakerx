@@ -17,7 +17,7 @@ class News extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
-            $table->string('pics');
+            $table->string('pics')->nullable();
             $table->longText('resume');
             $table->longText('content');
             $table->text('author');

@@ -6,13 +6,6 @@
     <div id="product">
 
         @foreach($products as $product)
-            <pre>
-
-        @php
-            var_dump($product);
-die();
-        @endphp
-        </pre>
             <x-product :product="$product"></x-product>
         @endforeach
     </div>

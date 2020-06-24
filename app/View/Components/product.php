@@ -13,10 +13,7 @@ class product extends Component
      *
      * @var string
      */
-    public $name;
-    public $price;
-    public $pics;
-    public $id;
+    public $product;
 
     /**
      * Create a new component instance.
@@ -25,10 +22,7 @@ class product extends Component
      */
     public function __construct($product)
     {
-        $this->name = $product->name;
-        $this->price = $product->price;
-        $this->pics = $product->mainpics;
-        $this->id = $product->id;
+        $this->product = $product;
     }
 
     /**

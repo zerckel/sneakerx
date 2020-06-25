@@ -21,8 +21,8 @@ class create_brands extends Seeder
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
             'name' => $faker->company,
-            'pics' => $faker->imageUrl(),
-            'banner' => $faker->imageUrl(),
+            'pics' => asset('storage/brands/php5BC5.tmp_pics.png'),
+            'banner' => asset('storage/brands/php5BC5.tmp_pics.png'),
             'description' => $faker->text()
         ]);
     }

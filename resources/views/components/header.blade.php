@@ -1,9 +1,12 @@
 <header>
-    <a href="/" title="SneakerX">
+    <a href="/" title="SneakerX" class="desk">
         <img src="<?= asset('storage/sneakerx-logo.png') ?>" alt="Logo SneakerX">
     </a>
     <div class="menu">
         <div class="nav search_bar">
+            <a href="/" title="SneakerX" class="mob">
+                <img src="<?= asset('storage/softwhitelogo.png') ?>" alt="Logo SneakerX">
+            </a>
             <label>
                 <input id="search" placeholder="SEARCH" type="text">
             </label>

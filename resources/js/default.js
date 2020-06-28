@@ -1,3 +1,4 @@
+
 window.checkMail = function () {
 
     let message = {

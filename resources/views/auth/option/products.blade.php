@@ -114,7 +114,7 @@
                     </div>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" name="pics" id="pics">
-                        <label class="custom-file-label" for="pics">Select your main pics</label>
+                        <label class="custom-file-label" for="pics">Main pics</label>
                     </div>
                 </div>
                 @error('pics')
@@ -134,7 +134,7 @@
                     </div>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" name="secondary[]" id="secondary" multiple>
-                        <label class="custom-file-label" for="secondary">Select your secondary pics</label>
+                        <label class="custom-file-label" for="secondary">Secondary pics</label>
                     </div>
                 </div>
                 @error('secondary')

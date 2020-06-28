@@ -1,4 +1,4 @@
-<div>
+<div class="list">
     @if(!isset($news))
         <figure class="border-grey">
             <img src="<?= isset($brand) ? asset('storage/brands/' . $brand->banner) : "../storage/softLogo.png" ?>" alt="SneakerX">

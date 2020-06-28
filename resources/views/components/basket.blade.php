@@ -23,7 +23,7 @@ foreach ($basket as $article) {
     @foreach($basket as $article)
         <div data-id="{{ $article["\x00*\x00items"][0]->id }}" class="article">
             <figure>
-                <img class="img" width="100px" src="{{ $article["\x00*\x00items"][0]->mainpics }}"
+                <img class="img" width="100px" src="{{ asset( '../storage/products/' . $article["\x00*\x00items"][0]->mainpics) }}"
                      alt="{{ $article["\x00*\x00items"][0]->name }}">
                 <figcaption>
                     <span class="name">{{ $article["\x00*\x00items"][0]->name }}</span>

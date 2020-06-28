@@ -15,3 +15,11 @@ npm install
 php artisan serve
 
 npm run watch
+
+````
+
+## URL
+
+````
+GIT: https://github.com/zerckel/sneakerx
+URL: https://sneakerx-app.herokuapp.com/

@@ -39,7 +39,7 @@
                     </div>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" name="pics" id="pics">
-                        <label class="custom-file-label" for="pics">Select your main pics</label>
+                        <label class="custom-file-label" for="pics">Main pics</label>
                     </div>
                 </div>
                 @error('pics')
@@ -59,7 +59,7 @@
                     </div>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" name="banner" id="banner">
-                        <label class="custom-file-label" for="banner">Select your banner</label>
+                        <label class="custom-file-label" for="banner">Banner</label>
                     </div>
                 </div>
                 @error('banner')

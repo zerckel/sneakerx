@@ -17,7 +17,7 @@ class productsController extends Controller
     {
 
         $request->validate([
-            'name' => 'bail|required|max:255',
+            'name' => 'bail|required',
             'color' => 'bail|required',
             'brand' => 'bail|required',
             'price' => 'bail|required',
@@ -68,14 +68,14 @@ class productsController extends Controller
     public function updateProduct(Request $request)
     {
         $request->validate([
-            'name' => 'bail|required|max:255',
+            'name' => 'bail|required',
             'color' => 'bail|required',
             'brand' => 'bail|required',
             'price' => 'bail|required',
             'description' => 'bail|required|min:30',
             'published' => 'bail|required|boolean',
-            'pics' => 'bail|image|memes',
-            'secondary.*' => 'bail|image'
+            'pics' => 'bail|image|mimes:png',
+            'secondary.*' => 'bail|image|mimes:png'
         ]);
 
         if (!empty($request->file('pics'))) {

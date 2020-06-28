@@ -23,7 +23,7 @@
         </h2>
         @foreach(unserialize($order->products) as $article)
             @php
-                $totalPrice += $article['price']
+                $totalPrice += $article['price'] * $article['quantity']
             @endphp
             <div class="article">
                 <figure>
@@ -47,3 +47,6 @@
         </div>
     </div>
 </div>
+@php
+    session()->forget('basket')
+@endphp

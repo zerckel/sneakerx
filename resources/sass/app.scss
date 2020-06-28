@@ -34,6 +34,14 @@ body {
     font-family: 'robotomono-light', sans-serif;
 }
 
+.showTab {
+    display: none;
+}
+
+.mob {
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: unset;
@@ -54,6 +62,7 @@ body {
         display: flex;
         justify-content: center;
         margin: 0 auto;
+        width: 100vw;
         top: -40px;
         z-index: 1;
         transition: ease 1s;
@@ -1149,5 +1158,236 @@ header {
             margin-top: 5vh;
             font-weight: bold;
         }
+    }
+}
+
+// iPad
+
+@media screen and (max-width: 800px) {
+
+    header .menu .nav .basket,
+    header .menu .nav .search {
+        height: 3vh;
+    }
+
+    header .menu {
+        flex-wrap: wrap;
+    }
+
+    header a > img {
+        height: 10vh;
+    }
+
+    header .menu .search_bar {
+        justify-content: center;
+        width: 100%;
+    }
+
+    header .menu .nav:nth-child(2),
+    header .menu .nav:nth-child(3),
+    header .menu .nav:nth-child(4) {
+        width: 10vw;
+    }
+
+    header .menu .sticker {
+        right: 20px;
+        top: 40px;
+    }
+
+    header .menu .search_bar:hover input {
+        width: 25vw;
+    }
+
+    #news {
+        flex-wrap: wrap;
+
+        a {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+    }
+
+    #productSheet > div {
+        padding-top: 10vh;
+        flex-direction: column;
+    }
+
+    #productSheet > div .right {
+        margin-right: unset;
+    }
+
+    body#brands > div {
+        width: 90vw;
+    }
+
+    body#brands > div > figure img {
+        width: unset;
+        height: 15vh;
+    }
+
+    #newsList > div #news {
+        grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+    }
+
+    #NewsSheet > article {
+        width: 100%;
+    }
+    #NewsSheet article section {
+        padding: 0 20px;
+    }
+
+    body#contact article {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 20px;
+    }
+
+    body#contact article > div {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    body#contact iframe {
+        width: 100%;
+    }
+
+    body#contact article form#formContact {
+        width: 100%;
+    }
+
+    #cart .content {
+        width: 95%;
+    }
+
+    #cart .content .form {
+        width: 100%;
+    }
+
+    #order .content {
+        width: 100%;
+    }
+
+    #admin .container > div:first-child > a {
+        width: 20vw;
+    }
+}
+
+// PHONE
+
+@media screen and (max-width: 400px) {
+    .mob {
+        display: block;
+    }
+
+    .desk {
+        display: none;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header .menu {
+        width: 100vw;
+        margin-right: 0;
+    }
+
+    header .menu .nav:nth-child(2),
+    header .menu .nav:nth-child(3),
+    header .menu .nav:nth-child(4) {
+        width: 20vw;
+    }
+
+    #home section > h2 > span {
+        width: 220px;
+    }
+
+    a#productUnique article figure figcaption span {
+        text-align: center;
+    }
+
+    #news a {
+        width: 95%;
+    }
+
+    #newsList .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body#brands > div > figure {
+        align-items: center;
+    }
+
+    body#contact article form#formContact input,
+    body#contact article form#formContact textarea {
+        width: calc(100% - 10px);
+    }
+
+    #productSheet > div .right > div ul {
+        width: unset;
+    }
+
+    header .menu .sticker {
+        right: 5px;
+        top: 75px;
+        height: 20px;
+        width: 20px;
+
+        span {
+            margin-bottom: 0;
+        }
+    }
+
+    #productSheet > div .left {
+        width: calc(100% - 10px);
+        padding: 0 5px;
+    }
+
+    #productSheet > div {
+        padding-top: 5vh;
+    }
+
+    #admin .container > div:first-child > div:first-child {
+        width: 100%;
+    }
+
+    #admin header {
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-bottom: 15px;
+
+        > a.disconnect img {
+            height: auto;
+        }
+    }
+
+    #admin .container > div:first-child > div:first-child {
+        width: unset;
+    }
+
+    #admin .container > div:first-child > a {
+        width: 25vw;
+    }
+
+    #admin .container .list .elemList .option {
+        flex-direction: column;
+    }
+    #admin .container .list .elemList .option a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #admin > .option form .form-row .brand {
+        width: 50%;
+    }
+
+    #admin > .option form .form-row .price {
+        width: 40%;
+    }
+
+    #admin > .option .files_upload {
+        flex-direction: column;
     }
 }

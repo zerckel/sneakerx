@@ -49,6 +49,6 @@
                 <li class="sizeSelect">46</li>
             </ul>
         </div>
-        <button>ADD TO BASKET: {{ $product->price }}$</button>
+        <button onclick="addToBasket({{$product->id}})">ADD TO BASKET: {{ $product->price }}$</button>
     </section>
 </div>
